@@ -73,7 +73,7 @@ export class SendService {
       error => this.rpc_send_failed('transferBalance, Failed to get stealth address')
     );
 
-  }
+}
 
   /**
    * Retrieve the first stealth address.
@@ -88,7 +88,7 @@ export class SendService {
    * Estimates if estimateFeeOnly === true.
    */
   private send(tx: TransactionBuilder): Observable<any> {
-    return this._rpc.call('sendtypeto', [tx.input, tx.output, [{
+    return this._rpc.call('sendtoaddress', [tx.input, tx.output, [{
       address: tx.toAddress,
       amount: tx.amount,
       subfee: tx.subtractFeeFromAmount,
@@ -102,7 +102,7 @@ export class SendService {
     // Truncate the address to 16 characters only
     const trimAddress = address.substring(0, 16) + '...';
     const txsId = json.substring(0, 45) + '...';
-    this.flashNotification.open(`Succesfully sent ${amount} PART to ${trimAddress}!\nTransaction id: ${txsId}`, 'warn');
+    this.flashNotification.open(`Succesfully sent ${amount} VLS to ${trimAddress}!\nTransaction id: ${txsId}`, 'warn');
   }
 
   private rpc_send_failed(message: string, address?: string, amount?: number) {

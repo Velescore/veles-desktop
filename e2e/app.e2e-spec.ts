@@ -1,10 +1,10 @@
-import { PartguiPage } from './app.po';
+import { VelesguiPage } from './app.po';
 
 describe('partgui App', () => {
-  let page: PartguiPage;
+  let page: VelesguiPage;
 
   beforeEach(() => {
-    page = new PartguiPage();
+    page = new VelesguiPage();
   });
 
   it('should display message saying app works', () => {

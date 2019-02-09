@@ -29,9 +29,9 @@ describe('OverviewComponent', () => {
         ModalsModule.forRoot(),
       ],
       declarations: [
-        OverviewComponent,
-        StakinginfoComponent,
-        ColdstakeComponent
+        OverviewComponent
+        //StakinginfoComponent,
+        //ColdstakeComponent
       ]
     })
 

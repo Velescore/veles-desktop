@@ -25,7 +25,7 @@
       <div class="title">Pay from</div>
 
       <!-- Select "FROM" balance/account -->
-      <mat-radio-group class="from-balance-type block-radio" name="sendInput" [(ngModel)]="send.input" 
+      <mat-radio-group class="from-balance-type block-radio" name="sendInput" [(ngModel)]="send.input"
                        fxLayout="column" fxLayoutGap="10px" (change)="updateAmount()">
         <mat-radio-button class="balance" value="part" checked="checked"
                           (click)="send.output = (type === 'sendPayment')? TxType.PUBLIC: TxType.BLIND" fxFlex>
@@ -114,7 +114,7 @@
           </mat-radio-button>
         </mat-radio-group><!-- .from-balance-type -->
         <p class="widget-help">
-          Balance transfer helps you convert your PART between Public and Private balances.
+          Balance transfer helps you convert your VLS between Public and Private balances.
         </p>
       </mat-card>
 
@@ -191,7 +191,7 @@
         <!-- Choose currency -->
         <mat-select class="underliningSelect" fxFlex="0 0 70px" name="currency" [(ngModel)]="send.currency"
                     placeholder="Currency">
-          <mat-option value="part">PART</mat-option>
+          <mat-option value="part">VLS</mat-option>
         </mat-select>
         <!-- Send buttons -->
         <div class="actions" fxFlex="1 1 100%">

@@ -66,11 +66,11 @@ export class NewTxNotifierService implements OnDestroy {
     this.log.d('notify new tx: ' + tx);
     if (tx.category === 'receive') {
       this._notification.sendNotification(
-        'Incoming transaction', tx.amount + ' PART received'
+        'Incoming transaction', tx.amount + ' VLS received'
       );
     } else if (tx.category === 'stake') {
       this._notification.sendNotification(
-        'New stake reward', tx.amount + ' PART received'
+        'New stake reward', tx.amount + ' VLS received'
       );
     }
   }

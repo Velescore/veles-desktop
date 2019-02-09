@@ -1,8 +1,8 @@
 var got = require("got");
 var fs = require('fs');
 
-var releasesURL = "https://api.github.com/repos/particl/particl-core/releases";
-var signaturesURL = "https://api.github.com/repos/particl/gitian.sigs/contents";
+var releasesURL = "https://api.github.com/repos/Velescore/Veles/releases/latest";
+var signaturesURL = "";
 var maintainer = "tecnovert";
 
 /*
@@ -40,7 +40,7 @@ var getOSXAsset = function (data, asset, hashes) {
     data.type = "dmg";
   } else if (asset.name.endsWith('.tar.gz') || asset.name.endsWith('.tar')) {
     data.type = "tar";
-  } 
+  }
   data.sha256 = getHash("osx", asset.name, hashes);
 }
 
@@ -81,8 +81,8 @@ var getAssetDetails = function (asset, hashes, version) {
   }
 
   // add .exe extension for windows binaries
-  let bin = `particld${data.platform === 'win' ? '.exe' : ''}`
-  
+  let bin = `velesd${data.platform === 'win' ? '.exe' : ''}`
+
   // return asset only if it is fully compliant
   return (data.platform && data.arch && data.type ? {
     platform: data.platform,
@@ -93,13 +93,13 @@ var getAssetDetails = function (asset, hashes, version) {
         url: asset.browser_download_url,
         type: data.type,
         sha256: data.sha256,
-        bin: `particl-${version}/bin/${bin}`
+        bin: `veles-${version}/bin/${bin}`
       },
       bin: bin,
       commands: {
         sanity: {
           args: ["-version"],
-          output: ["Particl Core Daemon", version]
+          output: ["Veles Core Daemon", version]
         }
       }
     }
@@ -135,7 +135,7 @@ var getHashesForPlatform = function (platform, path, hashes) {
 
 /*
  * Entry point
- * get Particl latest release files
+ * get Veles latest release files
  */
 got(`${releasesURL}`).then(response => {
   const body = JSON.parse(response.body);
@@ -146,7 +146,7 @@ got(`${releasesURL}`).then(response => {
     releaseIndex++;
   }
   release = body[releaseIndex];
-  
+
   let tag = release.tag_name.substring(1);
   let binaries = [];
 
@@ -176,7 +176,7 @@ got(`${releasesURL}`).then(response => {
       // prepare JSON object for the output file
       var json = {
         clients: {
-          particld: {
+          velesd: {
             version: tagWithoutRc,
             platforms: {}
           }
@@ -189,9 +189,9 @@ got(`${releasesURL}`).then(response => {
           binaries.push(entry);
         }
       })
-      
+
       // include entries in JSON object
-      var platforms = json.clients.particld.platforms;
+      var platforms = json.clients.velesd.platforms;
       binaries.forEach(binary => {
         // define an empty object for current platform if not already defined
         if (!platforms[binary.platform]) {

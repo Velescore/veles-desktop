@@ -28,7 +28,7 @@ exports.init = function () {
             // get authentication
             let auth = getAuthentication(u);
 
-            if(auth === undefined && u === "localhost:4200") {
+            if(auth === undefined && u === "localhost:5493") {
                 auth = false;
             }
 

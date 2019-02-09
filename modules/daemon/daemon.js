@@ -94,7 +94,9 @@ exports.start = function (wallets) {
       wallets = wallets.map(wallet => `-wallet=${wallet}`);
       log.info(`starting daemon ${daemonPath} ${process.argv} ${wallets}`);
 
-      const child = spawn(daemonPath, [...process.argv, "-rpccorsdomain=http://localhost:4200", ...wallets])
+      const child = spawn(daemonPath, [...process.argv, "-rpcbind=localhost:5493", ...wallets])
+
+
         .on('close', code => {
           if (code !== 0) {
             reject();
@@ -186,7 +188,7 @@ function askForDeletingCookie() {
       electron.dialog.showMessageBox({
         type: 'warning',
         buttons: ['Yes', 'No'],
-        message: `It seems like you already have an instance of Particl running, do you want to connect to that instead? 
+        message: `It seems like you already have an instance of Veles running, do you want to connect to that instead?
                   If you think you're having issues starting the application, select no.`
       }, (response) => {
         if (response === 1) {

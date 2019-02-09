@@ -8,8 +8,8 @@ import { map, catchError } from 'rxjs/operators';
 import { IpcService } from '../ipc/ipc.service';
 import { environment } from '../../../environments/environment';
 
-const MAINNET_PORT = 51735;
-const TESTNET_PORT = 51935;
+const MAINNET_PORT = 5493;
+const TESTNET_PORT = 5493;
 const HOSTNAME = 'localhost';
 
 declare global {
@@ -34,13 +34,13 @@ export class RpcService implements OnDestroy {
    * IP/URL for daemon (default = localhost)
    */
   // private hostname: String = HOSTNAME; // TODO: URL Flag / Settings
-  private hostname: String = environment.particlHost;
+  private hostname: String = environment.velesHost;
 
   /**
    * Port number of of daemon (default = 51935)
    */
   // private port: number = TESTNET_PORT; // TODO: Mainnet / testnet flag...
-  private port: number = environment.particlPort;
+  private port: number = environment.velesPort;
 
   // note: basic64 equiv= dGVzdDp0ZXN0
   private username: string = 'test';

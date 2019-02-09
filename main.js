@@ -9,7 +9,7 @@ const platform      = require('os').platform();
 
 /* correct appName and userData to respect Linux standards */
 if (process.platform === 'linux') {
-  app.setName('particl-desktop');
+  app.setName('veles-desktop');
   app.setPath('userData', `${app.getPath('appData')}/${app.getName()}`);
 }
 
@@ -19,7 +19,7 @@ if (process.platform === 'linux') {
 ].map(path => !fs.existsSync(path) && fs.mkdirSync(path));
 
 if (app.getVersion().includes('RC'))
-  process.argv.push(...['-testnet']);
+  process.argv.push(...['']);
 
 const options = require('./modules/options').parse();
 const log     = require('./modules/logger').init();
@@ -41,12 +41,12 @@ app.on('ready', () => {
   log.info('app ready')
   log.debug('argv', process.argv);
   log.debug('options', options);
-  
+
   app.setAppUserModelId("io.particl.desktop");
-  
+
   // initialize the authentication filter
   _auth.init();
-  
+
   initMainWindow();
   init.start(mainWindow);
 });
@@ -98,7 +98,6 @@ function initMainWindow() {
     darkTheme: true,
 
     webPreferences: {
-      backgroundThrottling: false,
       webviewTag: false,
       nodeIntegration: false,
       sandbox: true,
@@ -201,11 +200,11 @@ function makeTray() {
       submenu: [
         {
           label: 'About ' + app.getName(),
-          click() { electron.shell.openExternal('https://particl.io/#about'); }
+          click() { electron.shell.openExternal('https://veles.network'); }
         },
         {
-          label: 'Visit Particl.io',
-          click() { electron.shell.openExternal('https://particl.io'); }
+          label: 'Visit Veles.network',
+          click() { electron.shell.openExternal('https://veles.network'); }
         },
         {
           label: 'Visit Electron',
@@ -224,7 +223,7 @@ function makeTray() {
   // }
 
   // Set the tray icon
-  tray.setToolTip('Particl ' + app.getVersion());
+  tray.setToolTip('Veles ' + app.getVersion());
   tray.setContextMenu(contextMenu)
 
   // Always show window when tray icon clicked

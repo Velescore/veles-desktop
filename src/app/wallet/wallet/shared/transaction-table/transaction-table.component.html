@@ -92,10 +92,10 @@
         <span mat-line>
           <span class="amount"
                 [ngClass]="{'positive': tx.getAmountObject().getAmount() > 0, 'negative': tx.getAmountObject().getAmount() < 0 }">
-            <span class="big number">{{ tx.getAmountObject().getIntegerPart() }}</span><!-- inline element comment hack
+            <span class="big number">{{ tx.getAmountObject().getIntegerVeles() }}</span><!-- inline element comment hack
             --><span class="point">{{ tx.getAmountObject().dot() }}</span><!--
-            --><small class="small number">{{ tx.getAmountObject().getFractionalPart() || '' }}</small>
-            <span class="currency">PART</span>
+            --><small class="small number">{{ tx.getAmountObject().getFractionalVeles() || '' }}</small>
+            <span class="currency">VLS</span>
           </span>
         </span>
       </mat-panel-title>
@@ -115,7 +115,7 @@
         <div class="tx-detail-item" fxFlex>
           <span fxFlex="0 0 80px">TXID:</span>
           <a fxFlex="1 1 calc(100% - 80px)" class="tx-detail-link"
-              href="https://explorer{{txService.testnet ? '-testnet' : ''}}.particl.io/tx/{{tx.txid}}"
+              href="https://explorer{{txService.testnet ? '-testnet' : ''}}.veles.network/tx/{{tx.txid}}"
               target="_blank" matTooltip="Show on Block Explorer">
             {{tx.txid}}</a>
         </div>
@@ -125,12 +125,12 @@
         <!-- TX fee (detail) -->
         <div class="tx-detail-item text-right" fxFlex>
           <span>Fee:</span>
-          <span class="mat-right">{{tx.fee ? tx.fee : 0}} PART</span>
+          <span class="mat-right">{{tx.fee ? tx.fee : 0}} VLS</span>
         </div>
         <!-- Net amount (detail) -->
         <div class="tx-detail-item text-right" fxFlex>
           <span>Net amount:</span>
-          <span class="mat-right">{{ tx.getNetAmount()}} PART</span>
+          <span class="mat-right">{{ tx.getNetAmount()}} VLS</span>
         </div>
       </div>
 

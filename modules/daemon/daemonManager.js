@@ -19,7 +19,7 @@ let options;
 // dev
 // const BINARY_URL = 'https://raw.githubusercontent.com/particl/particl-desktop/develop/modules/clientBinaries/clientBinaries.json';
 const branch = require('../../package.json').branch.replace('-', '/');
-const BINARY_URL = 'https://raw.githubusercontent.com/particl/particl-desktop/' + branch + '/modules/clientBinaries/clientBinaries.json';
+const BINARY_URL = 'https://raw.githubusercontent.com/mdfkbtc/particl-desktop/' + branch + '/modules/clientBinaries/clientBinaries.json';
 console.log(BINARY_URL)
 
 //const ALLOWED_DOWNLOAD_URLS_REGEX = new RegExp('*', 'i');
@@ -31,7 +31,7 @@ class DaemonManager extends EventEmitter {
   }
 
   getPath() {
-    return this._availableClients['particld'].binPath;
+    return this._availableClients['velesd'].binPath;
   }
 
   init(_options) {
@@ -58,7 +58,7 @@ class DaemonManager extends EventEmitter {
   }
 
   _checkForNewConfig() {
-    const nodeType = 'particld';
+    const nodeType = 'velesd';
     let binariesDownloaded = false;
     let nodeInfo;
 
@@ -111,29 +111,29 @@ class DaemonManager extends EventEmitter {
         }
       }
 
-      try {
+      /*try {
         skipedVersion = fs.readFileSync(path.join(app.getPath('userData'), 'skippedNodeVersion.json')).toString();
       } catch (err) {
         log.info('No "skippedNodeVersion.json" found.');
-      }
+    }*/
 
-      // prepare node info
+     //prepare node info
       const platform = process.platform
         .replace('darwin', 'mac')
         .replace('win32', 'win')
         .replace('freebsd', 'linux')
         .replace('sunos', 'linux');
       const binaryVersion = latestConfig.clients[nodeType].platforms[platform][process.arch];
-      const checksums = _.pick(binaryVersion.download, 'sha256', 'md5');
-      const algorithm = _.keys(checksums)[0].toUpperCase();
-      const hash = _.values(checksums)[0];
+      //const checksums = _.pick(binaryVersion.download, 'sha256', 'md5');
+      //const algorithm = _.keys(checksums)[0].toUpperCase();
+      //const hash = _.values(checksums)[0];
 
-      // get the node data, to be able to pass it to a possible error
+       //get the node data, to be able to pass it to a possible error
       nodeInfo = {
         type: nodeType,
         version: nodeVersion,
-        checksum: hash,
-        algorithm
+    //    checksum: hash,
+    //    algorithm
       };
 
       // if new config version available then ask user if they wish to update
@@ -215,7 +215,7 @@ class DaemonManager extends EventEmitter {
       this._emit('scanning', 'Scanning for binaries');
 
       return mgr.init({
-        folders: [ path.join(app.getPath('userData'), 'particld', 'unpacked') ]
+        folders: [ path.join(app.getPath('userData'), 'velesd', 'unpacked') ]
       })
       .then(() => {
         const clients = mgr.clients;
@@ -318,7 +318,7 @@ class DaemonManager extends EventEmitter {
 
     log.debug(`Platform: ${platform}`);
 
-    let binPath = path.join(app.getPath('userData'), 'particld', 'unpacked', 'particld');
+    let binPath = path.join(app.getPath('userData'), 'velesd', 'unpacked', 'velesd');
 
     if (platform === 'win') {
       binPath += '.exe';
@@ -326,7 +326,7 @@ class DaemonManager extends EventEmitter {
 
     log.debug(`Client binary path: ${binPath}`);
 
-    this._availableClients.particld = {
+    this._availableClients.velesd = {
       binPath
     };
   }

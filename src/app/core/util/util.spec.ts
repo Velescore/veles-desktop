@@ -46,8 +46,8 @@ describe('Amount', () => {
 
   it('should return amount', () => {
     expect(amount.getAmount()).toEqual(mockAmount);
-    expect(amount.getIntegerPart()).toEqual(5);
-    expect(amount.getFractionalPart()).toEqual('6');
+    expect(amount.getIntegerVeles()).toEqual(5);
+    expect(amount.getFractionalVeles()).toEqual('6');
     expect(amount.positiveOrZero(-5)).toBe('0');
     expect(amount.dot()).toBe('.');
     expect(amount.truncateToDecimals(-25.99999, 3)).toEqual(-25.999);
@@ -56,8 +56,8 @@ describe('Amount', () => {
 
   it('should validate 0.001', () => {
     expect(amountTwo.getAmount()).toEqual(mockAmountTwo);
-    expect(amountTwo.getIntegerPart()).toEqual(0);
-    expect(amountTwo.getFractionalPart()).toEqual('006');
+    expect(amountTwo.getIntegerVeles()).toEqual(0);
+    expect(amountTwo.getFractionalVeles()).toEqual('006');
     expect(amountTwo.dot()).toBe('.');
   });
 

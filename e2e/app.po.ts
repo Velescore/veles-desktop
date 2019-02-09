@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class PartguiPage {
+export class VelesguiPage {
   navigateTo() {
     return browser.get('/');
   }

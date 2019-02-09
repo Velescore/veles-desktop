@@ -94,7 +94,7 @@ export class MainViewComponent implements OnInit, OnDestroy {
       .subscribe(status => this.walletInitialized = status);
 
 
-    this._rpcState.observe('getwalletinfo', 'unlocked_until')
+    this._rpcState.observe('getwalletinfo'/*, 'unlocked_until'*/)
       .takeWhile(() => !this.destroyed)
       .subscribe(status => {
         this.unlocked_until = status;

@@ -49,7 +49,7 @@ exports.call = function(method, params, callback) {
     method: method,
     params: params
   });
-  
+
   if(spyOnRpc) {
     log.debug('rpc.call:', postData);
   }
@@ -57,16 +57,17 @@ exports.call = function(method, params, callback) {
   if (!rpcOptions) {
     rpcOptions = {
       hostname: HOSTNAME,
-      port:     PORT,
+      port:    5493, //PORT,
       path:     '/',
       method:   'POST',
       headers:  { 'Content-Type': 'application/json' }
+      //auth: 'test:test'
     }
-  }
+ }
 
   if (auth && rpcOptions.auth !== auth) {
     rpcOptions.auth = auth
-  }
+    }
 
   rpcOptions.headers['Content-Length'] = postData.length;
 

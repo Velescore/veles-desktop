@@ -1,8 +1,8 @@
 <mat-card class="balance-overview">
   <div class="total balance-item">
-    <app-balance type="total_balance"></app-balance>
+    <app-balance type="balance"></app-balance>
   </div>
-  <div class="public balance-item">
+<!--  <div class="public balance-item">
     <app-balance type="balance"></app-balance>
   </div>
   <div class="blind balance-item">
@@ -13,7 +13,7 @@
   </div>
   <div class="stake balance-item">
     <app-balance type="staked_balance"></app-balance>
-  </div>
+  </div>-->
 </mat-card>
 
 
@@ -68,7 +68,7 @@
         </ul>
       </app-header>
       <transaction-table
-        [display]="{'txDisplayAmount': 5, 'header': false, 'internalHeader': true, 'category': true, 'confirmations': true}">
+        [display]="{'txDisplayAmount': 5, 'header': false, 'internalHeader': true, 'category': false, 'confirmations': true}">
       </transaction-table>
     </div><!-- .recent-transactions -->
 
@@ -100,7 +100,7 @@
       </mat-card>.list.orders
     </div>.buy-orders -->
 
-    <app-coldstake></app-coldstake>
+    <!--<app-coldstake></app-coldstake>
     <app-stakinginfo></app-stakinginfo>
 
     <!-- TODO: uncomment when widget management is ready -->

@@ -1,65 +1,65 @@
 {
   "clients": {
-    "particld": {
-      "version": "0.17.1.0",
+    "velesd": {
+      "version": "v0.17.0.22",
       "platforms": {
         "linux": {
           "arm": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-arm-linux-gnueabihf.tar.gz",
+              "url": "https://github.com/Velescore/Veles-core/releases/download/v0.17.0.22/velesLinux.tar.gz",
               "type": "tar",
-              "sha256": "c135443341397c53155d7275c14b57b2c27176466b98bd08ad4065512ac4862b",
-              "bin": "particl-0.17.1.0/bin/particld"
+              "sha256": "",
+              "bin": "/veles/velesd"
             },
-            "bin": "particld",
+            "bin": "velesd",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.22"
                 ]
               }
             }
           },
           "ia32": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-i686-pc-linux-gnu_nousb.tar.gz",
+              "url": "https://github.com/Velescore/Veles/releases/download/v0.17.0.22/linuxunknown.tar.gz",
               "type": "tar",
-              "sha256": "2e5b3e100dd20817ec17cc68979c43b6648326c6806287db4e7920b5f53ed346",
-              "bin": "particl-0.17.1.0/bin/particld"
+              "sha256": "",
+              "bin": "/veles/velesd"
             },
-            "bin": "particld",
+            "bin": "velesd",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.22"
                 ]
               }
             }
           },
           "x64": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-x86_64-linux-gnu_nousb.tar.gz",
+              "url": "https://github.com/Velescore/Veles/releases/download/v0.17.0.22/velesLinux.tar.gz",
               "type": "tar",
-              "sha256": "ea54eda36ba91c20aed38f48cdab09fe714a0d414eff7cf635d98e986b84421d",
-              "bin": "particl-0.17.1.0/bin/particld"
+              "sha256": "",
+              "bin": "/veles/velesd"
             },
-            "bin": "particld",
+            "bin": "velesd",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.22"
                 ]
               }
             }
@@ -68,20 +68,20 @@
         "mac": {
           "x64": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-osx64.tar.gz",
+              "url": "https://github.com/Velescore/Veles/releases/download/v0.17.0.22/velesLinux.tar.gz",
               "type": "tar",
-              "sha256": "5fce3364cc208d91be52e6902083dc56cf304dbee4fb078bb0f1498e8c6e1577",
-              "bin": "particl-0.17.1.0/bin/particld"
+              "sha256": "",
+              "bin": "/veles/velesd"
             },
-            "bin": "particld",
+            "bin": "velesd",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.22"
                 ]
               }
             }
@@ -90,40 +90,40 @@
         "win": {
           "ia32": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-win32.zip",
+              "url": "https://github.com/particl/particl-core/releases/download/v0.17.0.1/particl-0.17.0.1-win32.zip",
               "type": "zip",
-              "sha256": "9915dbddf590374803859918d37cc306fe893e46f6f057f15e641b978bf89b55",
-              "bin": "particl-0.17.1.0/bin/particld.exe"
+              "sha256": "ba17b2869e1d10818e29caaeea8815ddea2ea13568529b91b19caa51a0aae153",
+              "bin": "/veles/velesd.exe"
             },
-            "bin": "particld.exe",
+            "bin": "velesd.exe",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.17-dd5b8fe"
                 ]
               }
             }
           },
           "x64": {
             "download": {
-              "url": "https://github.com/particl/particl-core/releases/download/v0.17.1.0/particl-0.17.1.0-win64.zip",
+              "url": "https://github.com/particl/particl-core/releases/download/v0.17.0.1/particl-0.17.0.1-win64.zip",
               "type": "zip",
-              "sha256": "f14b8f3aa3034be6ef03bee2148df588066b15bbe1b796b10a6874d9a05ad1b8",
-              "bin": "particl-0.17.1.0/bin/particld.exe"
+              "sha256": "fdda08451e532a9deac8719c9c5f04c75680ed07b603c07608136f20be0bf68b",
+              "bin": "/veles/velesd.exe"
             },
-            "bin": "particld.exe",
+            "bin": "velesd.exe",
             "commands": {
               "sanity": {
                 "args": [
                   "-version"
                 ],
                 "output": [
-                  "Particl Core Daemon",
-                  "0.17.1.0"
+                  "Veles Core Daemon",
+                  "v0.17.0.17-dd5b8fe"
                 ]
               }
             }

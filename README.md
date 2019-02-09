@@ -1,6 +1,6 @@
-# Particl Desktop
+# Veles Desktop
 
-> *"Particl is an open source project that aims to restore the balance of privacy on the internet."*
+> *"Veles is an open source project that aims to restore the balance of privacy on the internet."*
 
 ![UI Preview](preview.gif)
 
@@ -19,14 +19,14 @@
 
 ## About
 
-Particl Desktop is our feature-rich flagship client, recommended for most users for interacting with Particl network.
+Veles Desktop is our feature-rich flagship client, recommended for most users for interacting with Veles network.
 
 We provide a decentralized privacy platform with a suite of tools to enhance your online privacy:
 
-* **An anonymous cryptocurrency** – send and receive the PART cryptocurrency without revealing the transaction history
+* **An anonymous cryptocurrency** – send and receive the VLS cryptocurrency without revealing the transaction history
 * **End-to-end encrypted messaging** – communicate in a secure and decentralized manner without revealing your IP address
 * **A private marketplace** – buy and sell goods without leaving a trace (WIP on `market` branch)
-* **Community governance** – anyone can submit proposals to Particl network via decentralized voting & governance (WIP on `market` branch)
+* **Community governance** – anyone can submit proposals to Veles network via decentralized voting & governance (WIP on `market` branch)
 
 This repository is the user interface that works in combination with our [`particl-core`](https://github.com/particl/particl-core).
 
@@ -43,7 +43,7 @@ This repository is the user interface that works in combination with our [`parti
 [![Code Climate](https://codeclimate.com/github/particl/particl-desktop/badges/gpa.svg)](https://codeclimate.com/github/particl/particl-desktop)
 [![Greenkeeper badge](https://badges.greenkeeper.io/particl/particl-desktop.svg)](https://greenkeeper.io/)
 
-For contributing to Particl Desktop, please read our [Contributing Guidelines](CONTRIBUTING.md) first.
+For contributing to Veles Desktop, please read our [Contributing Guidelines](CONTRIBUTING.md) first.
 
 Join us in [#particl-dev:matrix.org](https://riot.im/app/#/room/#particl-dev:matrix.org) on [Riot](https://riot.im) for more info and/or assistance.
 
@@ -69,7 +69,7 @@ yarn install
 > Note: most recent development happens on `market` branch
 
 1. Run `ng serve` to start the dev server and keep it running
-1. In another terminal window, run `yarn run start:electron:dev -testnet --devtools` to start Particl Desktop on testnet (daemon will be updated and launched automatically)
+1. In another terminal window, run `yarn run start:electron:dev -testnet --devtools` to start Veles Desktop on testnet (daemon will be updated and launched automatically)
    * `-testnet` – for running on testnet (omit for running the client on mainnet)
    * `-reindex` – reindexes the blockchain (in case you're stuck)
    * `--devtools` – automatically opens Developer Tools on client launch
@@ -115,14 +115,14 @@ yarn run start:electron:dev -testnet --devtools -reindex
 Delete marketplace `database` folder and restart app:
 
 * Windows: `%appdata%\particl-market\testnet\`
-* macOS: `~/Library/Application Support/Particl/particl-market/testnet/`
+* macOS: `~/Library/Application Support/Veles/particl-market/testnet/`
 * Linux: `~/.particl-market/testnet/`
 
 ### Other issues
 
-See our [Particl Wiki](https://particl.wiki/) for most common problems or join [#particlhelp:matrix.org](https://riot.im/app/#/room/#particlhelp:matrix.org) on [Riot](https://riot.im) for community help.
+See our [Veles Wiki](https://particl.wiki/) for most common problems or join [#particlhelp:matrix.org](https://riot.im/app/#/room/#particlhelp:matrix.org) on [Riot](https://riot.im) for community help.
 
 
 ## Licence
 
-Particl Desktop is released under [GNU General Public License v2.0](LICENCE).
+Veles Desktop is released under [GNU General Public License v2.0](LICENCE).

@@ -13,9 +13,10 @@ describe('ConsoleModalComponent', () => {
   let fixture: ComponentFixture<ConsoleModalComponent>;
   const cmds = [
     'help',
-    'getaddressbalance rSoZtLcT1RySGgVKFchkwBXowFjJzufScc',
+    'getaddressbalance VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBjDevelopers',
     'walletpassphrase "passphrase" 9999',
-    'sendtypeto "part" "blind" [{ address: "rSoZtLcT1RySGgVKFchkwBXowFjJzufScc" }]',
+    'sendtoaddress [{ address: "" }] "part"',
+    //'sendtypeto "part" "blind" [{ address: "VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBjDevelopers" }]',
     'somecommand [ test1,  test2]',
     'somecommand { test1: "testests",  testes2 : "testest1232"}'
   ]
@@ -49,11 +50,11 @@ describe('ConsoleModalComponent', () => {
     let mockParse = component.queryParser(cmds[0]);
     expect(mockParse.length).toEqual(1);
     mockParse = component.queryParser(cmds[1]);
-    expect(mockParse[1]).toEqual('rSoZtLcT1RySGgVKFchkwBXowFjJzufScc');
+    expect(mockParse[1]).toEqual('VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBjDevelopers');
     mockParse = component.queryParser(cmds[2]);
     expect(mockParse[2]).toEqual('9999');
     mockParse = component.queryParser(cmds[3]);
-    expect(mockParse[3]).toEqual('[{address:"rSoZtLcT1RySGgVKFchkwBXowFjJzufScc"}]');
+    expect(mockParse[3]).toEqual('[{address:"VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBjDevelopers"}]');
     mockParse = component.queryParser(cmds[4]);
     expect(mockParse[1]).toEqual('[test1,test2]');
     mockParse = component.queryParser(cmds[5]);

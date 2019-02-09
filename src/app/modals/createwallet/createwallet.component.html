@@ -1,17 +1,17 @@
 <!-- STEP 0: Choose action -->
 <ng-template [ngIf]="step === 0">
 
-  <div mat-dialog-title class="title">Welcome to Particl Desktop</div>
+  <div mat-dialog-title class="title">Welcome to Veles Desktop</div>
   <mat-dialog-content class="modal-content">
     <p>
-      Particl Desktop is a feature-rich client for interacting with Particl network.<br>
+      Veles Desktop is a feature-rich client for interacting with Veles network.<br>
     </p>
     <p class="info">
-      Visit <a href="https://particl.io" target="_blank" tabindex="-1">particl.io</a> official site for more info, <a href="https://particl.news" target="_blank" tabindex="-1">particl.news</a> for latest news and <a href="https://particl.wiki" target="_blank" tabindex="-1">particl.wiki</a> if you need any help
+      Visit <a href="https://veles.network" target="_blank" tabindex="-1">veles.network</a> official site for more info, <a href="https://veles.network" target="_blank" tabindex="-1">veles.network</a> for latest news and <a href="https://veles.network" target="_blank" tabindex="-1">veles.network</a> if you need any help
     </p>
     <div class="subtitle">Create or restore wallet</div>
     <p>
-      In order to connect to Particl network, you need to have a wallet. If you're using Particl for the first time, create a new wallet or restore existing wallet (using your Recovery Passphrase) if you have one already.
+      In order to connect to Veles network, you need to have a wallet. If you're using Veles for the first time, create a new wallet or restore existing wallet (using your Recovery Passphrase) if you have one already.
     </p>
     <p class="widget-help" *ngIf="!isCrypted">
       It is recommended to encrypt your wallet before creating or restoring a wallet, in order to not leave any possible key fragments lying around.
@@ -30,7 +30,7 @@
         <mat-icon fontSet="partIcon" fontIcon="part-lock-open"></mat-icon>
         Restore wallet
       </button>
-      <button mat-raised-button color="primary" (click)="initialize(1);" matTooltip="If you haven't used Particl before or want to create a new, separate wallet">
+      <button mat-raised-button color="primary" (click)="initialize(1);" matTooltip="If you haven't used Veles before or want to create a new, separate wallet">
         <mat-icon fontSet="partIcon" fontIcon="part-add-account"></mat-icon>
         Create new wallet
       </button>
@@ -57,9 +57,9 @@
       </p><!-- validation errors -->
       <mat-form-field>
         <input matInput #nameField #validation="ngModel" [(ngModel)]="name" name="name" placeholder="Wallet name" required maxlength="32" [class.verify-error]="validation.errors && (validation.dirty || validation.touched)"/>
-      </mat-form-field>      
+      </mat-form-field>
     </mat-dialog-content>
-    
+
     <mat-dialog-actions fxLayoutAlign="space-between center">
       <button mat-button (click)="prevStep()">
         <mat-icon fontSet="partIcon" fontIcon="part-previous-single"></mat-icon>
@@ -70,7 +70,7 @@
         Continue
       </button>
     </mat-dialog-actions>
-    
+
   </form>
 </ng-template><!-- step 1 -->
 
@@ -188,7 +188,7 @@
     <div class="recovery-password">
       <div class="subtitle">Recovery Password</div>
       <p class="warning">
-        Wallets created using particl-desktop 1.1.0 did not import with a password due to a bug.
+        Wallets created using veles-desktop 1.1.0 did not import with a password due to a bug.
         Please leave the password field empty if you're restoring a recovery phrase dating from that release.
       </p>
       <p>
@@ -249,7 +249,7 @@
       Please ensure that your Recovery Phrase (and Passphrase if you set it up) is written down and stored in a secure location!
     </p>
     <p>
-      You can now safely close this window and start experiencing Particl!
+      You can now safely close this window and start experiencing Veles!
     </p>
   </mat-dialog-content>
   <mat-dialog-actions fxLayoutAlign="end center">

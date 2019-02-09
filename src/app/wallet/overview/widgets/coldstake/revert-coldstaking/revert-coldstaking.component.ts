@@ -132,7 +132,7 @@ export class RevertColdstakingComponent implements OnInit {
           this._rpcState.set('ui:coldstaking', false);
           this.dialogRef.close();
           this.flashNotification.open(
-            `Succesfully brought ${amount} PART into hot wallet`, 'warn');
+            `Succesfully brought ${amount} VLS into hot wallet`, 'warn');
         }
       });
     });

@@ -11,7 +11,7 @@ const SPY_ON_ZMQ = true;
 let mainReference = null;
 
 exports.init = function (mainWindow) {
-    /* 
+    /*
         Store a reference of the main window (electron),
         which we need for rx-ipc-electron (need to get webContents).
     */
@@ -20,7 +20,7 @@ exports.init = function (mainWindow) {
 
 /*
     Sends a message to the Angular frontend, on the channel "zmq".
-    Subchannels can be anything "wtxhash", "smsg", .. (particl-core)
+    Subchannels can be anything "wtxhash", "smsg", .. (Veles-core)
     TODO (maybe): promise structure?
 */
 exports.send = function(subchannel, ...data) {

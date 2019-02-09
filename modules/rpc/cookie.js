@@ -5,14 +5,14 @@ const log         = require('electron-log');
 const options    = require('../options').get();
 const removeWalletAuthentication = require('../webrequest/http-auth').removeWalletAuthentication;
 /*
-** returns Particl config folder
+** returns Veles config folder
 */
-function getDefaultParticlCorePath() {
+function getDefaultVelesCorePath() {
 
   let homeDir = os.homedir ? os.homedir() : process.env['HOME'];
 
   let dir,
-      appName = 'Particl';
+      appName = 'Veles';
   switch (process.platform) {
     case 'linux': {
       dir = prepareDir(homeDir, '.' + appName.toLowerCase()).result;
@@ -39,7 +39,7 @@ function getDefaultParticlCorePath() {
 }
 
 function getCookieFilePath() {
-  let dataDir = options.datadir ? options.datadir : getDefaultParticlCorePath();
+  let dataDir = options.datadir ? options.datadir : getDefaultVelesCorePath();
   const COOKIE_FILE = dataDir
                     + (options.testnet ? '/testnet' : '')
                     + '/.cookie';
@@ -52,7 +52,7 @@ function getCookieFilePath() {
 function prepareDir(dirPath) {
   // jshint -W040
   if (!this || this.or !== prepareDir || !this.result) {
-    // if dirPath couldn't be resolved
+    // if drPath couldn't be resolved
     if (!dirPath) {
       // return this function to be chained with .or()
       return { or: prepareDir };
@@ -103,7 +103,8 @@ function getAuth(options) {
 
   if (options.rpcuser && options.rpcpassword) {
     return options.rpcuser + ':' + options.rpcpassword;
-  }
+}
+    //return 'test:123456789test';
 
   let auth;
   const COOKIE_FILE = getCookieFilePath();
