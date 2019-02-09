@@ -31,12 +31,12 @@ describe('BalanceComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should return a balance equal to 0 (getIntegerVeles)', () => {
-    expect(component.balance.getIntegerVeles()).toBe(0);
+  it('should return a balance equal to 0 (getIntegerPart)', () => {
+    expect(component.balance.getIntegerPart()).toBe(0);
   });
 
-  it('should return a balance equal to 0 (getFractionalVeles)', () => {
-    expect(component.balance.getFractionalVeles()).toBe('');
+  it('should return a balance equal to 0 (getFractionalPart)', () => {
+    expect(component.balance.getFractionalPart()).toBe('');
   });
 
   it('should not return a dot because its just 0, not 0.0 ', () => {

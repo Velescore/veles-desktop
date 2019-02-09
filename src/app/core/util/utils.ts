@@ -20,7 +20,7 @@ export class Amount {
    * 25 -> '25'
    * 25.9 -> '25'
    */
-  public getIntegerVeles(): number {
+  public getIntegerPart(): number {
     return Math.trunc(this.amount);
   }
 
@@ -33,7 +33,7 @@ export class Amount {
    *
    * We have to return this as a string, else the leading zero's are gone.
    */
-  public getFractionalVeles(): string {
+  public getFractionalPart(): string {
     if (this.ifDotExist()) {
       return (this.getAmount().toString()).split('.')[1];
     }

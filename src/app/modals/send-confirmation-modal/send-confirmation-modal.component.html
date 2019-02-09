@@ -34,10 +34,10 @@
     </div>
 
     <div class="tx-amount">
-      <span class="big">{{ sendAmount.getIntegerVeles() }}</span>
+      <span class="big">{{ sendAmount.getIntegerPart() }}</span>
       <span *ngIf="sendAmount.ifDotExist()">
       <span class="point">.</span>
-      <span class="small">{{ sendAmount.getFractionalVeles() }}</span>&ensp;</span>
+      <span class="small">{{ sendAmount.getFractionalPart() }}</span>&ensp;</span>
       <span class="currency">VLS</span>
       <!-- TODO: until fiat estimations are implemented, hide them -->
       <div class="fiat">&asymp; 3.42 USD</div>

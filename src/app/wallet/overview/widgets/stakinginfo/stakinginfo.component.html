@@ -16,11 +16,11 @@
       <tr>
         <th>Your Stake weight</th>
         <!-- (your weight) / (network weight) * 1000 -->
-        <td>{{ownPercentageOfActiveStakingSupply.getIntegerVeles()}}.<small>{{ownPercentageOfActiveStakingSupply.getFractionalVeles()}}</small>&nbsp;&permil;</td>
+        <td>{{ownPercentageOfActiveStakingSupply.getIntegerPart()}}.<small>{{ownPercentageOfActiveStakingSupply.getFractionalPart()}}</small>&nbsp;&permil;</td>
       </tr>
       <tr>
         <th>Stake percentage</th>
-        <td>{{curStakeReward.getIntegerVeles()}}.<small>{{curStakeReward.getFractionalVeles()}}</small>&nbsp;%</td>
+        <td>{{curStakeReward.getIntegerPart()}}.<small>{{curStakeReward.getFractionalPart()}}</small>&nbsp;%</td>
       </tr>
     </table>
     <!-- .staking-overview -->

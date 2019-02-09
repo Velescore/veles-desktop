@@ -92,9 +92,9 @@
         <span mat-line>
           <span class="amount"
                 [ngClass]="{'positive': tx.getAmountObject().getAmount() > 0, 'negative': tx.getAmountObject().getAmount() < 0 }">
-            <span class="big number">{{ tx.getAmountObject().getIntegerVeles() }}</span><!-- inline element comment hack
+            <span class="big number">{{ tx.getAmountObject().getIntegerPart() }}</span><!-- inline element comment hack
             --><span class="point">{{ tx.getAmountObject().dot() }}</span><!--
-            --><small class="small number">{{ tx.getAmountObject().getFractionalVeles() || '' }}</small>
+            --><small class="small number">{{ tx.getAmountObject().getFractionalPart() || '' }}</small>
             <span class="currency">VLS</span>
           </span>
         </span>
