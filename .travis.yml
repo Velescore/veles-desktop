@@ -43,9 +43,9 @@ script:
   - yarn run lint
   - echo -en 'travis_fold:end:script.lint\\r'
 
-  #- echo 'Test Codebase' && echo -en 'travis_fold:start:script.test\\r'
-  #- yarn run travis:test
-  #- echo -en 'travis_fold:end:script.test\\r'
+  - echo 'Test Codebase' && echo -en 'travis_fold:start:script.test\\r'
+  - yarn run travis:test
+  - echo -en 'travis_fold:end:script.test\\r'
 
   - if [[ $TRUE_COMMIT_MESSAGES == *"+build"* ]]; then ./nightly.sh; fi;
 
