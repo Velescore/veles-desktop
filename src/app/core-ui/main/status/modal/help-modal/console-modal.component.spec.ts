@@ -16,7 +16,7 @@ describe('ConsoleModalComponent', () => {
     'getaddressbalance VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj',
     'walletpassphrase "passphrase" 9999',
     'sendtoaddress [{ address: "" }] "part"',
-    //'sendtypeto "part" "blind" [{ address: "VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj" }]',
+    // 'sendtypeto "part" "blind" [{ address: "VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj" }]',
     'somecommand [ test1,  test2]',
     'somecommand { test1: "testests",  testes2 : "testest1232"}'
   ]

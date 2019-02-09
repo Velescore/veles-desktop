@@ -30,8 +30,8 @@ describe('OverviewComponent', () => {
       ],
       declarations: [
         OverviewComponent
-        //StakinginfoComponent,
-        //ColdstakeComponent
+        // StakinginfoComponent,
+        // ColdstakeComponent
       ]
     })
 
