@@ -46,6 +46,7 @@ describe('ConsoleModalComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  VELES: temporarily disabled test
   it('should parse mutiple commands', () => {
     let mockParse = component.queryParser(cmds[0]);
     expect(mockParse.length).toEqual(1);
@@ -53,9 +54,9 @@ describe('ConsoleModalComponent', () => {
     expect(mockParse[1]).toEqual('VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj');
     mockParse = component.queryParser(cmds[2]);
     expect(mockParse[2]).toEqual('9999');
-    mockParse = component.queryParser(cmds[3]);
+//    mockParse = component.queryParser(cmds[3]);
 //    expect(mockParse[3]).toEqual('[{address:"VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj"}]');
-//    mockParse = component.queryParser(cmds[4]);
+    mockParse = component.queryParser(cmds[4]);
     expect(mockParse[1]).toEqual('[test1,test2]');
     mockParse = component.queryParser(cmds[5]);
     expect(mockParse[1]).toEqual('{test1:"testests",testes2:"testest1232"}');
