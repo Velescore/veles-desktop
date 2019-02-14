@@ -46,7 +46,7 @@ describe('ConsoleModalComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  VELES: temporarily disabled test
+//  VELES: temporarily disabled test
   it('should parse mutiple commands', () => {
     let mockParse = component.queryParser(cmds[0]);
     expect(mockParse.length).toEqual(1);
