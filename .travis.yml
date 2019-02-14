@@ -47,11 +47,10 @@ script:
   - yarn run travis:test
   - echo -en 'travis_fold:end:script.test\\r'
 
-  - if [[ $TRUE_COMMIT_MESSAGES == *"+build"* ]]; then ./nightly.sh; fi;
+#  - if [[ $TRUE_COMMIT_MESSAGES == *"+build"* ]]; then ./nightly.sh; fi;
 
   - echo 'Done!'
 
-# Disable coveralls for now
 after_script:
   - npm run coveralls
 

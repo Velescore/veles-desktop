@@ -15,7 +15,7 @@
     "webpack",
     "typescript"
   ],
-  "author": "Veles contributors",
+  "author": "Veles Desktop contributors",
   "main": "main.js",
   "scripts": {
     "ng": "ng",

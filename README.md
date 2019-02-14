@@ -28,24 +28,24 @@ We provide a decentralized privacy platform with a suite of tools to enhance you
 * **A private marketplace** – buy and sell goods without leaving a trace (WIP on `market` branch)
 * **Community governance** – anyone can submit proposals to Veles network via decentralized voting & governance (WIP on `market` branch)
 
-This repository is the user interface that works in combination with our [`particl-core`](https://github.com/particl/particl-core).
+This repository is the user interface that works in combination with our [`Veles`](https://github.com/Velescore/Veles).
 
 #### Download
 
-[![Download the packaged wallet for Mac, Windows and Linux](download-button.png)](https://github.com/particl/particl-desktop/releases)
+[![Download the packaged wallet for Mac, Windows and Linux](download-button.png)](https://github.com/Velescore/veles-desktop/releases)
 
 
 ## Contribute
 
-[![Snyk](https://snyk.io/test/github/particl/particl-desktop/badge.svg)](https://snyk.io/test/github/particl/particl-desktop)
-[![Build Status](https://travis-ci.org/particl/particl-desktop.svg?branch=master)](https://travis-ci.org/particl/particl-desktop)
-[![Coverage Status](https://coveralls.io/repos/github/particl/particl-desktop/badge.svg?branch=master)](https://coveralls.io/github/particl/particl-desktop?branch=master)
-[![Code Climate](https://codeclimate.com/github/particl/particl-desktop/badges/gpa.svg)](https://codeclimate.com/github/particl/particl-desktop)
-[![Greenkeeper badge](https://badges.greenkeeper.io/particl/particl-desktop.svg)](https://greenkeeper.io/)
+[![Snyk](https://snyk.io/test/github/Velescore/veles-desktop/badge.svg)](https://snyk.io/test/github/Velescore/veles-desktop)
+[![Build Status](https://travis-ci.org/Velescore/veles-desktop.svg?branch=master)](https://travis-ci.org/Velescore/veles-desktop)
+[![Coverage Status](https://coveralls.io/repos/github/Velescore/veles-desktop/badge.svg?branch=master)](https://coveralls.io/github/Velescore/veles-desktop?branch=master)
+[![Code Climate](https://codeclimate.com/github/Velescore/veles-desktop/badges/gpa.svg)](https://codeclimate.com/github/Velescore/veles-desktop)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Velescore/veles-desktop.svg)](https://greenkeeper.io/)
 
 For contributing to Veles Desktop, please read our [Contributing Guidelines](CONTRIBUTING.md) first.
 
-Join us in [#particl-dev:matrix.org](https://riot.im/app/#/room/#particl-dev:matrix.org) on [Riot](https://riot.im) for more info and/or assistance.
+Join us in [#veles-dev:matrix.org](https://riot.im/app/#/room/#veles-dev:matrix.org) on [Riot](https://riot.im) for more info and/or assistance.
 
 
 ## Getting started
@@ -59,8 +59,8 @@ Join us in [#particl-dev:matrix.org](https://riot.im/app/#/room/#particl-dev:mat
 ### Installation
 
 ```bash
-git clone https://github.com/particl/particl-desktop
-cd particl-desktop
+git clone https://github.com/Velescore/veles-desktop
+cd veles-desktop
 yarn install
 ```
 
@@ -74,12 +74,12 @@ yarn install
    * `-reindex` – reindexes the blockchain (in case you're stuck)
    * `--devtools` – automatically opens Developer Tools on client launch
 
-#### Interact with particl-core daemon
+#### Interact with veles-core daemon
 
 You can directly interact with the daemon ran by the Electron version.
 
 ```
-./particl-cli -testnet getblockchaininfo
+./veles-cli -testnet getblockchaininfo
 ```
 
 ### Packaging
@@ -114,13 +114,13 @@ yarn run start:electron:dev -testnet --devtools -reindex
 #### Marketplace fails to load
 Delete marketplace `database` folder and restart app:
 
-* Windows: `%appdata%\particl-market\testnet\`
-* macOS: `~/Library/Application Support/Veles/particl-market/testnet/`
-* Linux: `~/.particl-market/testnet/`
+* Windows: `%appdata%\veles-market\testnet\`
+* macOS: `~/Library/Application Support/Veles/veles-market/testnet/`
+* Linux: `~/.veles-market/testnet/`
 
 ### Other issues
 
-See our [Veles Wiki](https://particl.wiki/) for most common problems or join [#particlhelp:matrix.org](https://riot.im/app/#/room/#particlhelp:matrix.org) on [Riot](https://riot.im) for community help.
+See our [Veles Wiki](https://veles.wiki/) for most common problems or join [#veleshelp:matrix.org](https://riot.im/app/#/room/#veleshelp:matrix.org) on [Riot](https://riot.im) for community help.
 
 
 ## Licence
